@@ -1,0 +1,143 @@
+{
+    "v1_referrals_made": 0,
+    "instructor_id": null,
+    "total_workouts": 483,
+    "referrals_made": 1,
+    "total_pending_followers": 0,
+    "first_name": "Test",
+    "is_complete_profile": true,
+    "birthday": 323358625,
+    "created_at": 1534931357,
+    "phone_number": "5555550100",
+    "referral_code": null,
+    "facebook_access_token": null,
+    "has_active_device_subscription": true,
+    "subscription_credits_used": 0,
+    "default_max_heart_rate": 183,
+    "default_heart_rate_zones": [
+      0,
+      131.95000000000002,
+      152.25,
+      172.54999999999998,
+      192.85
+    ],
+    "is_strava_authenticated": true,
+    "subscription_credits": 0,
+    "customized_heart_rate_zones": [],
+    "has_active_digital_subscription": false,
+    "email": "test@email.com",
+    "cycling_ftp_workout_id": "123567890",
+    "estimated_cycling_ftp": 178,
+    "cycling_ftp": 0,
+    "weight": 192.0,
+    "gender": "male",
+    "external_music_auth_list": [
+      {
+        "provider": "apple_music",
+        "status": "disconnected",
+        "email": null
+      },
+      {
+        "provider": "spotify",
+        "status": "connected",
+        "email": "test@email.com"
+      }
+    ],
+    "obfuscated_email": "123567890123567890",
+    "is_fitbit_authenticated": false,
+    "total_following": 361,
+    "is_internal_beta_tester": false,
+    "total_pedaling_metric_workouts": 200,
+    "block_explicit": false,
+    "facebook_id": null,
+    "height": 71.0,
+    "member_groups": [],
+    "cycling_workout_ftp": 153,
+    "customized_max_heart_rate": 203,
+    "last_workout_at": 1585653133,
+    "cycling_ftp_source": "ftp_workout_source",
+    "total_non_pedaling_metric_workouts": 283,
+    "id": "123567890",
+    "username": "test",
+    "total_followers": 291,
+    "is_profile_private": false,
+    "has_signed_waiver": false,
+    "location": "Test USA",
+    "name": "Test Test",
+    "can_charge": true,
+    "created_country": "US",
+    "quick_hits": {
+      "quick_hits_enabled": true,
+      "speed_shortcuts": null,
+      "incline_shortcuts": null
+    },
+    "workout_counts": [
+      {
+        "name": "Cardio",
+        "slug": "cardio",
+        "count": 0,
+        "icon_url": "https://s3.amazonaws.com/static-cdn.pelotoncycle.com/workout-count-icons/zero-cardio2.png"
+      },
+      {
+        "name": "Bootcamp",
+        "slug": "circuit",
+        "count": 0,
+        "icon_url": "https://s3.amazonaws.com/static-cdn.pelotoncycle.com/workout-count-icons/zero-circuit2.png"
+      },
+      {
+        "name": "Yoga",
+        "slug": "yoga",
+        "count": 2,
+        "icon_url": "https://s3.amazonaws.com/static-cdn.pelotoncycle.com/workout-count-icons/nonzero-yoga2.png"
+      },
+      {
+        "name": "Strength",
+        "slug": "strength",
+        "count": 5,
+        "icon_url": "https://s3.amazonaws.com/static-cdn.pelotoncycle.com/workout-count-icons/nonzero-strength2.png"
+      },
+      {
+        "name": "Walking",
+        "slug": "walking",
+        "count": 0,
+        "icon_url": "https://s3.amazonaws.com/static-cdn.pelotoncycle.com/workout-count-icons/zero-walking2.png"
+      },
+      {
+        "name": "Running",
+        "slug": "running",
+        "count": 1,
+        "icon_url": "https://s3.amazonaws.com/static-cdn.pelotoncycle.com/workout-count-icons/nonzero-running2.png"
+      },
+      {
+        "name": "Stretching",
+        "slug": "stretching",
+        "count": 25,
+        "icon_url": "https://s3.amazonaws.com/static-cdn.pelotoncycle.com/workout-count-icons/nonzero-stretching2.png"
+      },
+      {
+        "name": "Cycling",
+        "slug": "cycling",
+        "count": 416,
+        "icon_url": "https://s3.amazonaws.com/static-cdn.pelotoncycle.com/workout-count-icons/nonzero-cycling2.png"
+      },
+      {
+        "name": "Meditation",
+        "slug": "meditation",
+        "count": 34,
+        "icon_url": "https://s3.amazonaws.com/static-cdn.pelotoncycle.com/workout-count-icons/nonzero-meditation2.png"
+      }
+    ],
+    "last_name": "Test",
+    "is_external_beta_tester": false,
+    "is_provisional": false,
+    "is_demo": false,
+    "paired_devices": [
+      {
+        "name": "RHYTHM+2103743",
+        "paired_device_type": "heart_rate_monitor",
+        "serial_number": "AA:BB:CC:DD:EE:FF"
+      }
+    ],
+    "middle_initial": "",
+    "hardware_settings": null
+  }
