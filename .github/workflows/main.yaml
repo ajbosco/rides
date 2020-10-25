@@ -1,0 +1,24 @@
+name: build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: '^1.15.0'
+    - name: Install dependencies
+      run: go get -u golang.org/x/lint/golint
+    - name: Run build
+      run: make build
+    - name: Run vet & lint & fmt
+      run: |
+        make vet
+        make lint
+        make fmt
+    - name: Run tests
+      run: make test
