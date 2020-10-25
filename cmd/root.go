@@ -23,7 +23,7 @@ var rootCmd = &cobra.Command{
 func newRootCmd(args []string) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:          "rides",
-		Short:        "A CLI for intereacting with the Peloton API",
+		Short:        "A CLI for interacting with the Peloton API",
 		SilenceUsage: true,
 		PersistentPreRunE: func(cmd *cobra.Command, _ []string) error {
 			if err := viper.BindPFlags(cmd.PersistentFlags()); err != nil {
