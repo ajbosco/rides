@@ -23,7 +23,7 @@ func newWorkoutsCmd() *cobra.Command {
 	}
 
 	flags := cmd.Flags()
-	flags.String("category", "cycling", "Workout type to display, defaults to 'cycling'")
+	flags.String("category", "", "Workout type to display")
 	flags.String("limit", "10", "Maximum number of workouts to display")
 
 	cmd.AddCommand(

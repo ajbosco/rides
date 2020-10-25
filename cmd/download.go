@@ -12,7 +12,7 @@ import (
 func newDownloadCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "download",
-		Short: "Download our workouts to a CSV file",
+		Short: "Download your workouts to a CSV file",
 		PreRunE: func(cmd *cobra.Command, args []string) error {
 			if err := viper.BindPFlags(cmd.Flags()); err != nil {
 				return err

@@ -24,9 +24,9 @@ func newUpcomingCmd() *cobra.Command {
 	}
 
 	flags := cmd.Flags()
-	flags.String("category", "cycling", "Workout type to display, defaults to 'cycling'")
-	flags.String("start", time.Now().Format("2006-01-02"), "Start Date to fetch upcoming workouts from, defaults to Today")
-	flags.String("end", time.Now().AddDate(0, 0, 2).Format("2006-01-02"), "End Date to fetch upcoming workouts until, defaults to Tomorrow")
+	flags.String("category", "cycling", "Workout type to display")
+	flags.String("start", time.Now().Format("2006-01-02"), "Start Date to fetch upcoming workouts from")
+	flags.String("end", time.Now().AddDate(0, 0, 2).Format("2006-01-02"), "End Date to fetch upcoming workouts until")
 
 	return cmd
 }

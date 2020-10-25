@@ -21,7 +21,7 @@ func newAddCmd() *cobra.Command {
 	}
 
 	flags := cmd.Flags()
-	flags.String("workout-id", "", "Workout ID to remove from your schedule")
+	flags.String("workout-id", "", "Workout ID to add to your schedule")
 
 	return cmd
 }
