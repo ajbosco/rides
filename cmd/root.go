@@ -1,18 +1,3 @@
-/*
-Copyright © 2020 Adam Boscarino
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-*/
 package cmd
 
 import (
@@ -35,10 +20,39 @@ var rootCmd = &cobra.Command{
 	Short: "A CLI for intereacting with the Peloton API",
 }
 
-// Execute adds all child commands to the root command and sets flags appropriately.
-// This is called by main.main(). It only needs to happen once to the rootCmd.
+func newRootCmd(args []string) *cobra.Command {
+	cmd := &cobra.Command{
+		Use:          "rides",
+		Short:        "A CLI for intereacting with the Peloton API",
+		SilenceUsage: true,
+		PersistentPreRunE: func(cmd *cobra.Command, _ []string) error {
+			if err := viper.BindPFlags(cmd.PersistentFlags()); err != nil {
+				return err
+			}
+			if err := viper.BindPFlags(cmd.Flags()); err != nil {
+				return err
+			}
+			return nil
+		},
+	}
+
+	flags := cmd.PersistentFlags()
+	flags.String("username", "", "Username for Peloton")
+	flags.String("password", "", "Password for Peloton")
+
+	cmd.AddCommand(
+		newUserCmd(),
+		newUpcomingCmd(),
+		newScheduleCmd(),
+		newWorkoutsCmd(),
+	)
+
+	return cmd
+}
+
+//Execute is the main entrypoint function
 func Execute() {
-	if err := rootCmd.Execute(); err != nil {
+	if err := newRootCmd(os.Args[1:]).Execute(); err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
@@ -46,12 +60,6 @@ func Execute() {
 
 func init() {
 	cobra.OnInitialize(initConfig)
-
-	flags := rootCmd.Flags()
-	flags.String("username", "", "Username for Peloton")
-	viper.BindPFlag("username", flags.Lookup("username"))
-	flags.String("password", "", "Password for Peloton")
-	viper.BindPFlag("password", flags.Lookup("password"))
 }
 
 // initConfig reads in config file and ENV variables if set.
@@ -76,9 +84,7 @@ func initConfig() {
 	viper.AutomaticEnv() // read in environment variables that match
 
 	// If a config file is found, read it in.
-	if err := viper.ReadInConfig(); err == nil {
-		fmt.Println("Using config file:", viper.ConfigFileUsed())
-	}
+	viper.ReadInConfig()
 }
 
 func getAuthenticatedClient(username, password string) (*peloton.Client, error) {
