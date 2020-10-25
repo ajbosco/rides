@@ -28,7 +28,7 @@ password: your-password
 
 ```console
 $ rides -h
-A CLI for intereacting with the Peloton API
+A CLI for interacting with the Peloton API
 
 Usage:
   rides [command]
