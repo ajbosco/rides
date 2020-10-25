@@ -1,5 +1,6 @@
 # rides
 
+[![Github Actions](https://github.com/ajbosco/rides/workflows/build/badge.svg?branch=master&event=push)](https://github.com/ajbosco/rides/actions?workflow=build)
 [![Go Report Card](https://goreportcard.com/badge/github.com/ajbosco/rides?style=flat-square)](https://goreportcard.com/report/github.com/ajbosco/rides)
 [![GoDoc](https://img.shields.io/badge/godoc-reference-5272B4.svg?style=flat-square)](https://godoc.org/github.com/ajbosco/rides/peloton)
 
