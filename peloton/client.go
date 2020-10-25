@@ -69,7 +69,6 @@ func (c *Client) doRequest(method, endpoint string, data interface{}) ([]byte, e
 
 	// Create the request.
 	uri := fmt.Sprintf("%s/%s", c.baseURL, strings.Trim(endpoint, "/"))
-	fmt.Println(uri)
 	req, err := http.NewRequest(method, uri, b)
 	if err != nil {
 		return nil, fmt.Errorf("creating %s request to %s failed, %w", method, uri, err)

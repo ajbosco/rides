@@ -11,4 +11,6 @@ const (
 	ReservationEndpoint = "api/reservation"
 	// FavoritesEndpoint is the API endpoint for favorites
 	FavoritesEndpoint = "api/favorites"
+	// InstructorEndpoint is the API endpoint for instructors
+	InstructorEndpoint = "api/instructor"
 )

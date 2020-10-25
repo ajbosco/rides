@@ -1,6 +1,6 @@
 .EXPORT_ALL_VARIABLES:
 NAME := rides
-PKG := github.com/ajbosco/rides/cmd/rides
+PKG := github.com/ajbosco/rides
 BUILD_DIR := $(shell pwd)/build
 TARGET := ${BUILD_DIR}/${NAME}
 VERSION := $(shell cat VERSION.txt)

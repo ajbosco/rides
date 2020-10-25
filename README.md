@@ -1,3 +1,3 @@
 # rides
 
-Command line tool to interact with [Peloton](https://www.onepeloton.com).
+The [Peloton](https://www.onepeloton.com) CLI you never wanted.

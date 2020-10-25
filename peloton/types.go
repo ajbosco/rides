@@ -14,7 +14,7 @@ type User struct {
 	Username       string    `json:"username"`
 	Ftp            int       `json:"cycling_workout_ftp"`
 	CustomMaxHr    int       `json:"customized_max_heart_rate"`
-	TotalWorkOuts  int       `json:"total_workouts"`
+	TotalWorkouts  int       `json:"total_workouts"`
 	DefaultMaxHr   int       `json:"default_max_heart_rate"`
 	EstimatedFtp   int       `json:"estimated_cycling_ftp"`
 	DefaultHrZones []float64 `json:"default_heart_rate_zones"`
@@ -23,6 +23,15 @@ type User struct {
 	Height         float64   `json:"height"`
 	Weight         float64   `json:"weight"`
 	Gender         string    `json:"gender"`
+}
+
+// Instructor defines the struct for the schedule object
+type Instructor struct {
+	ID          string   `json:"id"`
+	FirstName   string   `json:"first_name"`
+	LastName    string   `json:"last_name"`
+	Disciplines []string `json:"fitness_disciplines"`
+	Username    string   `json:"username"`
 }
 
 // Workouts defines the struct for the workouts object
@@ -181,4 +190,26 @@ type ScheduleRequest struct {
 // FavoritesRequest contains data needed to request favorite
 type FavoritesRequest struct {
 	RideID string `json:"ride_id"`
+}
+
+// WorkoutCSV matches Peloton CSV export
+type WorkoutCSV struct {
+	WorkoutTimestamp  string `csv:"Workout Timestamp"`
+	LiveOnDemand      string `csv:"Live/On-Demand"`
+	InstructorName    string `csv:"Instructor Name"`
+	LengthMinutes     string `csv:"Length (minutes)"`
+	FitnessDiscipline string `csv:"Fitness Discipline"`
+	Type              string `csv:"Type"`
+	Title             string `csv:"Title"`
+	ClassTimestamp    string `csv:"Class Timestamp"`
+	TotalOutput       string `csv:"Total Output"`
+	AvgWatts          string `csv:"Avg. Watts"`
+	AvgResistance     string `csv:"Avg. Resistance"`
+	AvgCadence        string `csv:"Avg. Cadence (RPM)"`
+	AvgSpeed          string `csv:"Avg. Speed (mph)"`
+	DistanceMiles     string `csv:"Distance (mi)"`
+	CaloriesBurned    string `csv:"Calories Burned"`
+	AvgHeartrate      string `csv:"Avg. Heartrate"`
+	AvgIncline        string `csv:"Avg. Incline"`
+	AvgPace           string `csv:"Avg. Pace (min/mi)"`
 }
